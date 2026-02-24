@@ -1,0 +1,56 @@
+Problem Statement or Requirement:
+
+A client’s requirement is, he wants to predict the insurance charges based on
+the several parameters. The Client has provided the dataset of the same.
+As a data scientist, you must develop a model which will predict the insurance
+charges.
+
+1.) Identify your problem statement
+    Straightword - prediction of input charges based on certain parameters
+
+2.) Tell basic info about the dataset (Total number of rows, columns)
+    Dataset contains:
+        input_label = "age,sex,bmi,children,smoker"
+        output_label = "charges"
+        Total rows = 1338
+        Total columns = 6
+
+3.) Mention the pre-processing method if you’re doing any (like converting
+string to number – nominal data)
+    The dataset contains categorical columns (sex, smoker) => encode to nominal data
+
+4.) Develop a good model with r2_score. You can use any machine learning
+algorithm; you can create many models. Finally, you have to come up
+with final model.
+    I'm listing the r2_score for all the model:
+        Linear =        0.7680881643600721 
+        SVM =           0.8506525310780688
+        Decision Tree = 0.8628846625378732
+        Random Forest = 0.8603594648119404
+        AdaBoosting=    0.8260955268362907
+        GradientBoost = 0.8695606981049682 
+        XGBoost       = 0.8703282507178823 --> Higher
+
+        Gradient Boosting has the better score
+
+5.) Mention your final model, justify why u have chosen the same
+    Based on the manual testing and evaluating using GridSearchCv 'XGBoost' performed better and efficiently than other models.
+    
+
+    ALGORITHMS USED:
+        1. Linear Regression
+        2. Support Vector Machines
+        3. Decision Trees
+        4. Random Forest
+        5. Boosting 
+            5.1. AdaBoosting
+            5.2. Gradient Boosting
+            5.3. Extreme Gradient Boosting (XGB)
+
+    LIBRARIES / TOOLS USED:
+        1. pandas -> Handles Datasets    
+        2. Matplotlib -> Visualizing datasets
+        3. Joblib / pickle --> File handling
+        4. Scikit learn --> Resource for machine learning algorithms
+        5. GridSearchCv --> Computing Hyperparameters
+        6. Standard Scaler --> Scaling
